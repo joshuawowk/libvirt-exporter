@@ -1,0 +1,17 @@
+services:
+  libvirt-exporter:
+    image: libvirt-exporter:latest 
+    container_name: libvirt-exporter
+    ports:
+      - "9177:9177"
+    networks:
+      - npm_net
+    # environment:
+    #  - key:"value"
+    volumes:
+      - /var/run/libvirt:/var/run/libvirt
+    restart: unless-stopped
+
+networks:
+  npm_net:
+    external: true
