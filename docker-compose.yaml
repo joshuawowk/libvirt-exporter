@@ -8,6 +8,12 @@ services:
       - npm_net
     # environment:
     #  - key:"value"
+    labels:
+      homepage.group: "Grafana"
+      homepage.name: "libvirt exporter"
+      homepage.icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/prometheus-node-exporter.svg"
+      homepage.href: "http://192.168.0.160:3000/"
+      homepage.description: "libvirt exporter for Prometheus"
     volumes:
       - /var/run/libvirt:/var/run/libvirt
     restart: unless-stopped
